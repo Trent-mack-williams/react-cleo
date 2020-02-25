@@ -634,7 +634,7 @@ a:hover + .white-lotus {
 }
 
 .collection-step-text {
-  margin-top: 50px;
+  margin: 50px 0 100px 0;
 }
 
 .product-image > div {
@@ -656,7 +656,6 @@ a:hover + .white-lotus {
 
 .collection-image-arr-cont {
   overflow: hidden;
-  margin-top: 40px;
   position: relative;
   width: 70%;
   margin-left: 15%;
