@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component } from "react";
+
 import NavBar from "./components/navBar/navBar.jsx";
 import HomePage from "./components/homePage.jsx";
 import ProductLine from "./components/productLine.jsx";
@@ -12,23 +13,23 @@ import { Route, Redirect, Switch } from "react-router-dom";
 import Footer from "./components/footer.jsx";
 import "./App.css";
 
-//function App() {
-
-function App() {
-  return (
-    <React.Fragment>
-      <NavBar />
-      <main role="main">
-        <Switch>
-          <Route path="/Home" component={HomePage} />
-          <Route path="/Product/:id" component={ProductPage} />;
-          <Route path="/Collection/:collection" component={ProductLine} />;
-          <Redirect from="/" exact to="/Home" />
-        </Switch>
-      </main>
-      <Footer />
-    </React.Fragment>
-  );
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <NavBar />
+        <main role="main">
+          <Switch>
+            <Route path="/Home" component={HomePage} />
+            <Route path="/Product/:id" component={ProductPage} />;
+            <Route path="/Collection/:collection" component={ProductLine} />;
+            <Redirect from="/" exact to="/Home" />
+          </Switch>
+        </main>
+        <Footer />
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
